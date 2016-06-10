@@ -6,6 +6,4 @@ pipelines:
   default:
     - step:
         script:
-          - gb vendor restore
-          - gb test
-          - gb build all
+          - go build -v
