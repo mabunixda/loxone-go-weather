@@ -1,0 +1,11 @@
+# You can use a Docker image from Docker Hub or your own container
+# registry for your build environment.
+image: desertbit/golang-gb
+
+pipelines:
+  default:
+    - step:
+        script:
+          - gb vendor restore
+          - gb test
+          - gb build all
