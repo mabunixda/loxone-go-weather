@@ -6,4 +6,5 @@ pipelines:
   default:
     - step:
         script:
+          - go get github.com/Sirupsen/logrus
           - go build -v
