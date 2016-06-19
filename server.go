@@ -139,7 +139,7 @@ func main() {
 	// create mux server
 	mux := http.NewServeMux()
 
-	mux.HandleFunc("/forecast", forecastHandler) // forecast handler
+	mux.HandleFunc("/weather", forecastHandler) // forecast handler
 	mux.HandleFunc("/", failHandler)             // everything else fail handler
 
 	// set up the server
