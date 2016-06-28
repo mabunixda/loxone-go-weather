@@ -7,7 +7,7 @@ To use this service you must create a developer account on forecast.io to get an
 
 * Clone the repo
 * Set the GOPATH to the cloned repo directory
-* From bitbucket-pipelines run the commans under the "script" node
+* From bitbucket-pipelines run the commands under the "script" node
 * Register a [forecast.io account|https://developer.forecast.io/register]
 * Copy the API Key from the lower part of [the page|https://developer.forecast.io/]
 * Run the weather service using the coordinates from Loxone Configuration and the API Key: 
