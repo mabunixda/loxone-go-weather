@@ -1,9 +1,9 @@
 FROM debian:jessie
 MAINTAINER Martin Buchleitner "martin@nitram.at"
 
-COPY LoxoneGoCalendar /opt/LoxoneGoCalendar
-RUN chmod 644 /opt/LoxoneGoCalendar
+COPY loxonegoweather /opt/loxonegoweather
+RUN chmod 644 /opt/loxonegoweather
 
-ENTRYPOINT ["/opt/LoxoneGoCalendar"]
+ENTRYPOINT ["/opt/loxonegoweather"]
 EXPOSE 8080
 CMD [""]
