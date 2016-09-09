@@ -8,6 +8,6 @@ RUN apt-get update && apt-get install -y  \
 COPY loxonegoweather /opt/loxonegoweather
 RUN chmod 755 /opt/loxonegoweather
 
-ENTRYPOINT ["/opt/loxonegoweather"]
 EXPOSE 8080
-CMD [""]
+
+CMD ["/opt/loxonegoweather"]
