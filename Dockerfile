@@ -1,9 +1,7 @@
-FROM debian:jessie
+FROM alpine:latest
 MAINTAINER Martin Buchleitner "martin@nitram.at"
 
-RUN apt-get update && apt-get install -y  \
-   ca-certificates \
-   && rm -rf /var/lib/apt/lists/*
+RUN apk --no-cache add ca-certificates
 
 COPY loxonegoweather /opt/loxonegoweather
 RUN chmod 755 /opt/loxonegoweather
