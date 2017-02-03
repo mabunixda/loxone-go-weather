@@ -8,7 +8,7 @@ container: golang
 
 golang: goreq
 	export GOPATH=${PWD}
-	go build
+	go build -v server.go
 
 goreq:
 	export GOPATH=${PWD}
