@@ -1,10 +1,10 @@
 # You can use a Docker image from Docker Hub or your own container
 # registry for your build environment.
-image: golang:1.7.5-alpine
+image: golang:1.8-alpine
 
 pipelines:
   default:
     - step:
         script:
-          - go get github.com/Sirupsen/logrus
-          - go build server.go -v		  
+          - apk add --no-cache git make 
+          - make golang
