@@ -1,4 +1,4 @@
-package print
+package main
 
 // Forecast contains the information returned from the server
 // when requesting the forecast.

@@ -1,4 +1,4 @@
-package main 
+package main
 
 import (
 	"encoding/json"
@@ -6,8 +6,6 @@ import (
 	"fmt"
 	"net/http"
 	"net/url"
-    
-    "./print"
 
 	"github.com/Sirupsen/logrus"
 )
@@ -67,7 +65,7 @@ func forecastHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
     */
-    var  forecast print.Forecast 
+    var  forecast Forecast
     dec := json.NewDecoder(resp.Body)
 	if err = dec.Decode(&forecast); err != nil {
 		return//forecast, fmt.Errorf("Decoding forecast response failed: %v", err)
@@ -81,14 +79,14 @@ func forecastHandler(w http.ResponseWriter, r *http.Request) {
 	// write the response from the API to our client
 	w.WriteHeader(resp.StatusCode)
 
-    print.PrintCurrent(w, forecast, true)
+    PrintCurrent(w, forecast, true)
 
 //	if _, err := w.Write(body); err != nil {
 //		writeError(w, fmt.Sprintf("writing response from %s failed: %v", url, err))
 //		return
 //	}
 
-    
+
 
 	return
 }
